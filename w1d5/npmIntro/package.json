@@ -1,0 +1,14 @@
+{
+  "name": "newbie",
+  "version": "0.0.1",
+  "description": "new",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michael Parker",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.0"
+  }
+}
