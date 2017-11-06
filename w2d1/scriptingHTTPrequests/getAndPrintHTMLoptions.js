@@ -1,16 +1,11 @@
-function getAndPrintHTML () {
+function getAndPrintHTML (options) {
 
   // while https is built-in to Node, it is a module, so it must be required
   var https = require('https');
 
-  var requestOptions = {
-    host: 'sytantris.github.io',
-    path: '/http-examples/step2.html'
-  };
-
   // notice that https.get takes a callback with one parameter -
   // response, which is a Stream that represents the HTTP response
-  https.get(requestOptions, function (response) {
+  https.get(options, function (response) {
 
     // set encoding of received data to UTF-8
     response.setEncoding('utf8');
@@ -39,4 +34,11 @@ function getAndPrintHTML () {
 
 }
 
-getAndPrintHTML();
+
+
+var requestOptions = {
+  host: 'sytantris.github.io',
+  path: '/http-examples/step3.html'
+};
+
+getAndPrintHTML(requestOptions);
